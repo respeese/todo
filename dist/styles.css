@@ -1,0 +1,61 @@
+html, body{
+    height: 98%;
+    background-color: #555B6E;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 19% 80%;
+    grid-template-rows: 10% 25% 25% 19% 16%;
+    background-color: #555B6E;
+    padding: 10px;
+    height: 100%;
+}
+
+.grid-item {
+    background-color: #FAF9F9;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#title-grid{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    position: relative;
+}
+
+#title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#projects-grid{
+    grid-column: 1;
+    grid-row: 2 / span 4;    
+}
+
+.projects{
+    border: 1px solid black;
+    padding: 5%;
+    margin: 8% auto;
+}
+
+#tasks-grid{
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+.tasks{
+    border: 1px solid black;
+    margin: 2% auto;
+}
+
+#completed-grid{
+    grid-column: 2;
+    grid-row: 4 / span 2;
+}
