@@ -45,6 +45,13 @@ html, body{
     margin: 8% auto;
 }
 
+#projects-add{
+    border: solid 1px black;
+    margin: 30px auto;
+}
+
+
+
 #tasks-grid{
     grid-column: 2;
     grid-row: 2 / span 2;
@@ -53,9 +60,36 @@ html, body{
 .tasks{
     border: 1px solid black;
     margin: 2% auto;
+    position: relative;
+}
+
+.tasks > img {
+    position: absolute;
+    right: 1%;
+    top: 14%;
+}
+
+.task-check{
+    position: absolute;
+    left: 3%;
+    top: 30%;
+    margin-right: 5%;
+}
+
+.task-date{
+    font-size: 0.7em;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin: 6px 40px;
+}
+
+#tasks-add{
+    border: solid 1px black;
 }
 
 #completed-grid{
     grid-column: 2;
     grid-row: 4 / span 2;
 }
+
