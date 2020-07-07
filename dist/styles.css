@@ -110,7 +110,7 @@ html, body {
     position: fixed;
     bottom: 0;
     right: 15px;
-    border: 3px solid #f1f1f1;
+    border: 3px solid #555B6E;
     z-index: 9;
 }
 
@@ -120,7 +120,8 @@ html, body {
     max-width: 500px;
     min-width: 400px;
     padding: 10px;
-    background-color: white;
+    background-color: #FAF9F9;
+    border: solid 1px #555B6E;
 }
 
 /* Full-width input fields */
@@ -140,18 +141,13 @@ html, body {
     background: #f1f1f1;
 }
 
-/* When the inputs get focus, do something */
-
-.form-container input[type=text]:focus {
-    background-color: #ddd;
+.form-container input[type=text]:focus, .form-container textarea:focus {
+    background-color: #BEE3DB;
     outline: none;
 }
 
-/* Set a style for the submit/login button */
-
 .priority-btns {
-    background-color: #555B6E;
-    color: white;
+    color: black;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -160,10 +156,16 @@ html, body {
     opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
+#form-low {
+    background-color: #BEE3DB;
+}
+
+#form-high {
+    background-color: #FAB3A9;
+}
 
 #done-btn {
-    background-color: #4CAF50;
+    background-color: #555B6E;
     color: white;
     padding: 16px 20px;
     border: none;

@@ -33,19 +33,21 @@
         <div class="form-popup" id="todoForm">
             <form class="form-container">
                 <h1>Task Details</h1>
-        
                 <label for="title"><b>Title</b></label><br>
-                <input type="text" placeholder="Enter task title" name="title" required>
+                <input type="text" placeholder="Enter task title" name="title" id="form-title" required>
                 <br>
                 <label for="desc"><b>Description</b></label><br>
-                <textarea name="desc" rows="8" cols="20" placeholder="Describe the task"></textarea>
+                <textarea name="desc" rows="8" cols="20" placeholder="Describe the task" id="form-desc"></textarea>
                 <br>
                 <label for="dueDate"><b>Due date</b></label><br>
-                <input type="text" placeholder="Enter due date" name="dueDate">
+                <input type="text" placeholder="Enter due date" name="dueDate" id="form-dueDate">
                 <br>
                 <label for="priority"><b>Priority</b></label><br>
-                <button type="button" name="priority" value="high" class="priority-btns">High</button>
-                <button type="button" name="priority" value="low" class="priority-btns">Low</button>
+                <input type="radio" id="form-high" name="priority" value="high">
+                <label for="form-high">High</label><br>
+                <input type="radio" id="form-low" name="priority" value="low" checked>
+                <label for="form-low">Low</label><br>
+
                 <br>
                 <button type="submit" id="done-btn" onclick="closeForm()">Done</button>
             </form>

@@ -1,6 +1,7 @@
 import TaskModule from './tasks.js';
 
-const addTask = document.getElementById('tasks-add');
-addTask.addEventListener('click', function(){
-    TaskModule.addTodo();
+const doneBtn = document.getElementById('done-btn');
+doneBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    TaskModule.makeTask();
 })

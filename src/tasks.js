@@ -12,8 +12,30 @@ class Task {
 
 const TaskModule = (function() {
     return {
-        addTodo: function() {
-            console.log("todo added!");
+        makeTask: function() {
+            let desc="";
+            let dueDate = "";
+            let priority ="";
+
+            let title = document.getElementById('form-title').value;
+            if (document.getElementById('form-desc').value != null){
+                desc = document.getElementById('form-desc').value;
+            } 
+            if(document.getElementById('form-dueDate').value != null){
+                dueDate = document.getElementById('form-dueDate').value;
+            }
+            if (document.getElementById('form-low').checked) {
+                priority = document.getElementById('form-low').value;
+            }
+            if (document.getElementById('form-high').checked) {
+                priority = document.getElementById('form-high').value;
+            }
+            
+            let newTask = new Task(title, desc, dueDate, priority);
+            this.addTaskDiv(newTask);
+        },
+        addTaskDiv: function(task) {
+            console.log(task);
         }
     };
 }) ();
