@@ -19,16 +19,49 @@
         </div>
         <div class="grid-item" id="tasks-grid">
             <h3>Tasks</h3> 
-            <div class="tasks"><input type="checkbox" id="myCheck" class="task-check">Something to do! 
+            <div class="tasks"><input type="checkbox" id="myCheck" class="task-check"><div class="task-title">Something to do! </div>
                 <div class="task-date">07/20/20</div><img src="https://img.icons8.com/material/24/000000/multiply--v1.png" /></div>
-            <img id="tasks-add"  src="https://img.icons8.com/ios-filled/35/000000/plus-math.png" />
+            <img id="tasks-add" onclick="openForm()" src="https://img.icons8.com/ios-filled/35/000000/plus-math.png" />
         </div>
         <div class="grid-item" id="completed-grid"> 
             <h3>Completed</h3>
-            <div class="tasks"><input type="checkbox" id="myCheck" class="task-check" checked>Something to do!
+            <div class="tasks"><input type="checkbox" id="myCheck" class="task-check" checked><div class="task-title">Something to do! </div>
                 <div class="task-date">07/20/20</div><img src="https://img.icons8.com/material/24/000000/multiply--v1.png" /></div>
         </div>
+
+
+        <div class="form-popup" id="todoForm">
+            <form class="form-container">
+                <h1>Task Details</h1>
+        
+                <label for="title"><b>Title</b></label><br>
+                <input type="text" placeholder="Enter task title" name="title" required>
+                <br>
+                <label for="desc"><b>Description</b></label><br>
+                <textarea name="desc" rows="8" cols="20" placeholder="Describe the task"></textarea>
+                <br>
+                <label for="dueDate"><b>Due date</b></label><br>
+                <input type="text" placeholder="Enter due date" name="dueDate">
+                <br>
+                <label for="priority"><b>Priority</b></label><br>
+                <button type="button" name="priority" value="high" class="priority-btns">High</button>
+                <button type="button" name="priority" value="low" class="priority-btns">Low</button>
+                <br>
+                <button type="submit" id="done-btn" onclick="closeForm()">Done</button>
+            </form>
+        </div>
+        
     </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("todoForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("todoForm").style.display = "none";
+        }
+    </script>
 
     <script type="text/javascript" src="main.js"></script>
 </body>
