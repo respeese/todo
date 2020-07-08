@@ -1,23 +1,23 @@
 html, body {
-    height: 98%;
     background-color: #555B6E;
+    height: 98%;
 }
 
 .grid-container {
+    background-color: #555B6E;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 19% 80%;
     grid-template-rows: 10% 25% 25% 19% 16%;
-    background-color: #555B6E;
-    padding: 10px;
     height: 100%;
+    padding: 10px;
 }
 
 .grid-item {
     background-color: #FAF9F9;
-    text-align: center;
-    padding: 20px;
     font-size: 30px;
+    padding: 20px;
+    text-align: center;
 }
 
 #title-grid {
@@ -27,11 +27,11 @@ html, body {
 }
 
 #title {
-    position: absolute;
-    top: 0;
     left: 0;
-    right: 0;
     margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 #projects-grid {
@@ -41,14 +41,14 @@ html, body {
 
 .projects {
     border: 1px solid black;
-    padding: 5%;
     margin: 8% auto;
+    padding: 5%;
 }
 
 #projects-add {
     border: solid 1px black;
-    margin: 30px auto;
     cursor: pointer;
+    margin: 30px auto;
 }
 
 #tasks-grid {
@@ -63,32 +63,32 @@ html, body {
 }
 
 .tasks>img {
+    cursor: pointer;
     position: absolute;
     right: 1%;
     top: 14%;
-    cursor: pointer;
 }
 
 .task-check {
-    position: absolute;
     left: 3%;
-    top: 30%;
     margin-right: 5%;
+    position: absolute;
+    top: 30%;
 }
 
 .task-title {
     cursor: pointer;
-    width: 60%;
     margin: auto;
+    width: 60%;
 }
 
 .task-date {
-    font-size: 0.7em;
     display: inline-block;
+    font-size: 0.7em;
+    margin-right: 40px;
     position: absolute;
     right: 0;
     top: 15%;
-    margin-right: 40px;
 }
 
 #tasks-add {
@@ -101,44 +101,36 @@ html, body {
     grid-row: 4 / span 2;
 }
 
-/* {box-sizing: border-box;} */
-
-/* The popup form - hidden by default */
-
 .form-popup {
+    border: 3px solid #555B6E;
+    bottom: 0;
     display: none;
     position: fixed;
-    bottom: 0;
     right: 15px;
-    border: 3px solid #555B6E;
     z-index: 9;
 }
 
-/* Add styles to the form container */
-
 .form-container {
+    background-color: #FAF9F9;
+    border: solid 1px #555B6E;
     max-width: 500px;
     min-width: 400px;
     padding: 10px;
-    background-color: #FAF9F9;
-    border: solid 1px #555B6E;
 }
 
-/* Full-width input fields */
-
 .form-container input[type=text] {
-    width: 92%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
     background: #f1f1f1;
+    border: none;
+    margin: 5px 0 22px 0;
+    padding: 15px;
+    width: 92%;
 }
 
 .form-container textarea {
-    width: 98%;
-    margin: 5px 0 22px 0;
-    border: none;
     background: #f1f1f1;
+    border: none;
+    margin: 5px 0 22px 0;
+    width: 98%;
 }
 
 .form-container input[type=text]:focus, .form-container textarea:focus {
@@ -147,13 +139,13 @@ html, body {
 }
 
 .priority-btns {
-    color: black;
-    padding: 16px 20px;
     border: none;
+    color: black;
     cursor: pointer;
-    width: 49%;
     margin: 5px 0px 20px 0px;
     opacity: 0.8;
+    padding: 16px 20px;
+    width: 49%;    
 }
 
 #form-low {
@@ -166,16 +158,14 @@ html, body {
 
 #done-btn {
     background-color: #555B6E;
-    color: white;
-    padding: 16px 20px;
     border: none;
+    color: white;
     cursor: pointer;
-    width: 100%;
     margin-bottom: 10px;
     opacity: 0.8;
+    padding: 16px 20px;    
+    width: 100%;
 }
-
-/* Add some hover effects to buttons */
 
 .form-container .btn:hover, .open-button:hover {
     opacity: 1;
