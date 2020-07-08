@@ -1,6 +1,5 @@
 import { format } from 'date-fns'
 
-
 class Task {
     constructor(title, desc, dueDate, priority) {
         this.title = title;
@@ -38,7 +37,36 @@ const TaskModule = (function () {
     };
 
     const addTaskDiv = function(task) {
-        console.log(task);
+        let grid = document.getElementById('tasks-grid');
+        let addBtn = document.getElementById('tasks-add');
+        let taskDiv = document.createElement('div');
+        let taskImg = document.createElement('img');
+        let taskDate = document.createElement('span');
+        let taskTitle = document.createElement('span');
+        let taskCheck = document.createElement('input');
+
+        taskDiv.classList.add('tasks');
+        taskCheck.type = "checkbox";
+        taskCheck.class = "task-check";
+        taskCheck.classList.add("task-check"); 
+        taskTitle.classList.add('task-title');
+        taskDate.classList.add('task-date');
+        taskImg.src = "https://img.icons8.com/material/24/000000/multiply--v1.png";
+        if (task.priority == "high"){
+            taskDiv.classList.add('form-high');
+        } else if (task.priority == "low") {
+            taskDiv.classList.add('form-low');
+        }
+        
+        taskDiv.appendChild(taskCheck);
+        taskDiv.appendChild(taskTitle);
+        taskDiv.appendChild(taskDate);
+        taskDiv.appendChild(taskImg);
+       
+        taskTitle.innerHTML = task.title;
+        taskDate.innerHTML = task.dueDate;
+
+        grid.insertBefore(taskDiv, addBtn);
     };
 
     return {
