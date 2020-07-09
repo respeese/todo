@@ -34,8 +34,13 @@ const TaskModule = (function () {
 
         let newTask = new Task(title, desc, dueDate, priority);
 
-        if (title.value == ""){
+
+        if (document.getElementById('form-title').value == "") {
+            alert('Please enter a title.');
+            return 0;
+        } else {
             addTaskDiv(newTask);
+            return 1;
         }
         
     };

@@ -117,6 +117,13 @@ html, body {
     max-width: 500px;
     min-width: 400px;
     padding: 10px;
+    position: relative;
+}
+
+#form-exit {
+    cursor: pointer;
+    position: absolute;
+    right: 1%;
 }
 
 .form-container input[type=text] {
@@ -141,7 +148,7 @@ html, body {
 }
 
 .form-container input[type=text]:focus, .form-container textarea:focus, .form-container input[type=date]:focus {
-    background-color: #BEE3DB;
+    border: 2px solid black;
     outline: none;
 }
 
