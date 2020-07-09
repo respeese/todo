@@ -33,7 +33,11 @@ const TaskModule = (function () {
         }
 
         let newTask = new Task(title, desc, dueDate, priority);
-        addTaskDiv(newTask);
+
+        if (title.value == ""){
+            addTaskDiv(newTask);
+        }
+        
     };
 
     const addTaskDiv = function(task) {

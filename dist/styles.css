@@ -10,6 +10,7 @@ html, body {
     grid-template-columns: 19% 80%;
     grid-template-rows: 10% 25% 25% 19% 16%;
     height: 100%;
+    min-width: 788px;
     padding: 10px;
 }
 
@@ -121,7 +122,7 @@ html, body {
 .form-container input[type=text] {
     background: #f1f1f1;
     border: none;
-    margin: 5px 0 22px 0;
+    margin: 5px 0 10px 0;
     padding: 15px;
     width: 92%;
 }
@@ -129,23 +130,27 @@ html, body {
 .form-container textarea {
     background: #f1f1f1;
     border: none;
-    margin: 5px 0 22px 0;
+    margin: 5px 0 10px 0;
     width: 98%;
 }
 
-.form-container input[type=text]:focus, .form-container textarea:focus {
+.form-container input[type=date] {
+    margin: 5px 0 14px 0;
+    background: #f1f1f1;
+    border: none;
+}
+
+.form-container input[type=text]:focus, .form-container textarea:focus, .form-container input[type=date]:focus {
     background-color: #BEE3DB;
     outline: none;
 }
 
-.priority-btns {
-    border: none;
-    color: black;
+.form-container input[type=radio] {
     cursor: pointer;
-    margin: 5px 0px 20px 0px;
-    opacity: 0.8;
-    padding: 16px 20px;
-    width: 49%;    
+}
+
+#form-div-high {
+    margin-top: 5px;
 }
 
 .form-low {
@@ -163,7 +168,7 @@ html, body {
     cursor: pointer;
     margin-bottom: 10px;
     opacity: 0.8;
-    padding: 16px 20px;    
+    padding: 16px 20px;
     width: 100%;
 }
 

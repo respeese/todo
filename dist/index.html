@@ -18,15 +18,20 @@
             <img id="projects-add" src="https://img.icons8.com/ios-filled/40/000000/plus-math.png" />
         </div>
         <div class="grid-item" id="tasks-grid">
-            <h3>Tasks</h3> 
-            <div class="tasks"><input type="checkbox" class="task-check"><span class="task-title">Something to do! </span>
-                <span class="task-date">07/20/20</span><img src="https://img.icons8.com/material/24/000000/multiply--v1.png" /></div>
+            <h3>Tasks</h3>
+            <div class="tasks form-high"><input type="checkbox" class="task-check"><span class="task-title">Something to
+                    do! </span>
+                <span class="task-date">07/20/20</span><img
+                    src="https://img.icons8.com/material/24/000000/multiply--v1.png" /></div>
             <img id="tasks-add" src="https://img.icons8.com/ios-filled/35/000000/plus-math.png" />
         </div>
-        <div class="grid-item" id="completed-grid"> 
+        <div class="grid-item" id="completed-grid">
             <h3>Completed</h3>
-            <div class="tasks"><input type="checkbox" id="myCheck" class="task-check" checked><div class="task-title">Something to do! </div>
-                <div class="task-date">07/20/20</div><img src="https://img.icons8.com/material/24/000000/multiply--v1.png" /></div>
+            <div class="tasks"><input type="checkbox" id="myCheck" class="task-check" checked>
+                <div class="task-title">Something to do! </div>
+                <div class="task-date">07/20/20</div><img
+                    src="https://img.icons8.com/material/24/000000/multiply--v1.png" />
+            </div>
         </div>
 
 
@@ -34,28 +39,31 @@
             <form class="form-container">
                 <h1>Task Details</h1>
                 <label for="title">
-                    <span><b>Task Title</b></span> 
-                    <input type="text" name="title" id="form-title" required/>
+                    <span><b>Task Title</b></span>
+                    <input type="text" name="title" id="form-title" required />
                     <span class="error"></span>
                 </label><br>
-                <br>
                 <label for="desc"><b>Description</b></label><br>
-                <textarea name="desc" rows="8" cols="20" placeholder="Describe the task" id="form-desc"></textarea>
+                <textarea name="desc" rows="8" cols="20" id="form-desc"></textarea>
                 <br>
                 <label for="dueDate"><b>Due date</b></label><br>
-                <input type="text" placeholder="Enter due date" name="dueDate" id="form-dueDate">
+                <input type="date" name="dueDate" id="form-dueDate">
                 <br>
-                <label for="priority"><b>Priority</b></label><br>
-                <input type="radio" id="form-high" name="priority" value="high">
-                <label for="form-high">High</label><br>
-                <input type="radio" id="form-low" name="priority" value="low" checked>
-                <label for="form-low">Low</label><br>
-
+                <label for="priority"><b>Priority</b></label>
                 <br>
+                <div class="form-high">
+                    <input type="radio" id="form-high" name="priority" value="high">
+                    <label for="form-high">High</label>
+                </div>
+                <div class="form-low">
+                    <input type="radio" id="form-low" name="priority" value="low" checked>
+                <label for="form-low">Low</label>
+                </div><br> 
+        
                 <button type="submit" id="done-btn">Done</button>
             </form>
         </div>
-        
+
     </div>
     <script type="text/javascript" src="main.js"></script>
 </body>
