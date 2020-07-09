@@ -1,5 +1,3 @@
-import { format } from 'date-fns'
-
 class Task {
     constructor(title, desc, dueDate, priority) {
         this.title = title;

@@ -44,12 +44,29 @@ html, body {
     border: 1px solid black;
     margin: 8% auto;
     padding: 5%;
+    position: relative;
 }
 
 #projects-add {
     border: solid 1px black;
     cursor: pointer;
     margin: 30px auto;
+}
+
+.projects-delete {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.projects-delete>img {
+    cursor: pointer;
+    display: none;
+    margin: 7% 9%;
+    vertical-align: middle;
 }
 
 #tasks-grid {
