@@ -10,6 +10,7 @@ const formExit = document.getElementById('form-exit');
 makeDefaultDiv();
 addProjectListeners();
 makeNewProject();
+TaskModule.completeTask();
 
 addTaskBtn.addEventListener('click', function () {
     openForm();
@@ -25,5 +26,5 @@ doneBtn.addEventListener('click', function (e) {
     if (taskMade == 1) {
         closeForm();
     }
-
+    TaskModule.completeTask();
 })

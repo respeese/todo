@@ -58,6 +58,7 @@ const TaskModule = (function () {
         taskCheck.classList.add("task-check"); 
         taskTitle.classList.add('task-title');
         taskDate.classList.add('task-date');
+        taskImg.classList.add('del-task');
         taskImg.src = "https://img.icons8.com/material/24/000000/multiply--v1.png";
         if (task.priority == "high"){
             taskDiv.classList.add('form-high');
@@ -76,8 +77,34 @@ const TaskModule = (function () {
         grid.insertBefore(taskDiv, addBtn);
     };
 
+    const completeTask = function(){
+        let checks = document.querySelectorAll('.task-check');
+        let tasksGrid = document.getElementById('tasks-grid');
+        let compGrid = document.getElementById('completed-grid');
+        let addBtn = document.getElementById('tasks-add');
+
+        checks.forEach((check) => {
+            check.addEventListener('click', function(){
+                let taskDiv = check.parentNode;
+                if(check.checked == true){
+                    tasksGrid.removeChild(taskDiv);
+                    compGrid.appendChild(taskDiv);
+                } else{
+                    compGrid.removeChild(taskDiv);
+                    tasksGrid.insertBefore(taskDiv, addBtn);
+                }
+                
+            })
+        })
+
+        const deleteTas = function(){
+            
+        }
+        
+    }
+
     return {
-        makeTask,
+        makeTask, completeTask,
     }
 })();
 
