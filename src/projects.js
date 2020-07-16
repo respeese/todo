@@ -9,6 +9,7 @@ function makeDefaultDiv() {
     let projName = document.createElement('div');
 
     div.classList.add('projects');
+    div.classList.add('active-project');
     innerDiv.classList.add('projects-delete');
     arrow.src = "https://img.icons8.com/ios-filled/30/000000/long-arrow-right.png";
     arrow.classList.add('proj-go');
@@ -46,8 +47,6 @@ function addProjectMouseEvents(div) {
 }
 
 function goToProject(arrow) {
-    
-
     arrow.addEventListener('click', () => {
         let projDiv = arrow.parentNode.parentNode;
         let projDivs = document.querySelectorAll('.projects');
@@ -58,6 +57,23 @@ function goToProject(arrow) {
             }
         })
         projDiv.classList.add('active-project');
+        showProjectTasks();
+    })
+}
+
+function showProjectTasks() {
+    let allTasks = document.querySelectorAll('.tasks');
+    let projName = document.querySelector('.active-project').childNodes[1].textContent;
+
+    allTasks.forEach((task) => {
+        if (task.classList.contains(projName)) {
+            task.style.visibility = "visible";
+            task.style.position = "relative";
+        } else {
+            task.style.visibility = "hidden";
+            task.style.position = "absolute";
+        }
+        
     })
 }
 

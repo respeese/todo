@@ -51,8 +51,10 @@ const TaskModule = (function () {
         let taskDate = document.createElement('span');
         let taskTitle = document.createElement('span');
         let taskCheck = document.createElement('input');
+        let projName = document.querySelector('.active-project').childNodes[1].textContent;
 
         taskDiv.classList.add('tasks');
+        taskDiv.classList.add(projName);
         taskCheck.type = "checkbox";
         taskCheck.class = "task-check";
         taskCheck.classList.add("task-check"); 
@@ -81,7 +83,6 @@ const TaskModule = (function () {
     };
 
     const addCompleteTask = function(check){
-        // let checks = document.querySelectorAll('.task-check');
         let tasksGrid = document.getElementById('tasks-grid');
         let compGrid = document.getElementById('completed-grid');
         let addBtn = document.getElementById('tasks-add');
