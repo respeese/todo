@@ -10,7 +10,7 @@ html, body {
     grid-template-columns: 19% 80%;
     grid-template-rows: 10% 25% 25% 19% 16%;
     height: 100%;
-    min-width: 788px;
+    min-width: 869px;
     padding: 10px;
 }
 
@@ -38,6 +38,7 @@ html, body {
 #projects-grid {
     grid-column: 1;
     grid-row: 2 / span 4;
+    overflow-y: auto;
 }
 
 .projects {
@@ -76,6 +77,7 @@ html, body {
 #tasks-grid {
     grid-column: 2;
     grid-row: 2 / span 2;
+    overflow-y: auto;
 }
 
 .tasks {
@@ -121,6 +123,7 @@ html, body {
 #completed-grid {
     grid-column: 2;
     grid-row: 4 / span 2;
+    overflow-y: auto;
 }
 
 .form-popup {
