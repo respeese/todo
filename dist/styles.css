@@ -50,6 +50,7 @@ body {
 .projects {
     border: 2px solid black;
     border-radius: 9px;
+    box-shadow: 5px 5px 5px grey;
     margin: 8% auto;
     padding: 5%;
     position: relative;
@@ -129,8 +130,10 @@ body {
 .tasks {
     border: 1px solid black;
     border-radius: 9px;
+    box-shadow: 5px 5px 5px grey;
     margin: 2% auto;
     position: relative;
+    
 }
 
 .tasks>img {
