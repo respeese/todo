@@ -24,6 +24,7 @@ function makeDefaultDiv() {
     div.appendChild(projName);
 
     addProjectMouseEvents(innerDiv);
+    deleteProject(x);
     goToProject(arrow);
 }
 
@@ -44,6 +45,15 @@ function addProjectMouseEvents(div) {
     })
 
 
+}
+
+function deleteProject(x) {
+    x.addEventListener('click', () => {
+        let projDiv = x.parentNode.parentNode;
+        let projGrid = document.querySelector('#projects-grid');
+        
+        projGrid.removeChild(projDiv);
+    })
 }
 
 function goToProject(arrow) {
@@ -105,6 +115,7 @@ function makeNewProject() {
         innerDiv.appendChild(x);
         div.appendChild(projName);
 
+        deleteProject(x);
         goToProject(arrow);
         addProjectMouseEvents(innerDiv);
 
