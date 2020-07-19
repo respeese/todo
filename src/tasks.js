@@ -22,6 +22,10 @@ const TaskModule = (function () {
         }
         if (document.getElementById('form-dueDate').value != null) {
             dueDate = document.getElementById('form-dueDate').value;
+            let year = dueDate.slice(0, 4);
+            let month = dueDate.slice(5,7);
+            let day = dueDate.slice(8,10);
+            dueDate = month + '/' + day + '/' + year;
         }
         if (document.getElementById('form-low').checked) {
             priority = document.getElementById('form-low').value;

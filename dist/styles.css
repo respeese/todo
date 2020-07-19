@@ -1,21 +1,27 @@
-html, body {
-    background-color: #555B6E;
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
     height: 98%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .grid-container {
-    background-color: #555B6E;
+    background-color: black;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 19% 80%;
     grid-template-rows: 10% 25% 25% 19% 16%;
     height: 100%;
     min-width: 869px;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .grid-item {
     background-color: #FAF9F9;
+    border-radius: 9px;
     font-size: 30px;
     padding: 20px;
     text-align: center;
@@ -42,19 +48,22 @@ html, body {
 }
 
 .projects {
-    border: 1px solid black;
+    border: 2px solid black;
+    border-radius: 9px;
     margin: 8% auto;
     padding: 5%;
     position: relative;
 }
 
 #projects-add {
-    border: solid 1px black;
+    border: solid 2px black;
+    border-radius: 9px;
     cursor: pointer;
     margin: 30px auto;
 }
 
 .projects-delete {
+    border-radius: 9px;
     display: block;
     height: 100%;
     left: 0;
@@ -71,7 +80,7 @@ html, body {
 }
 
 .active-project {
-    border: 3px solid red;
+    border: 7px double black;
 }
 
 #modal {
@@ -119,6 +128,7 @@ html, body {
 
 .tasks {
     border: 1px solid black;
+    border-radius: 9px;
     margin: 2% auto;
     position: relative;
 }
@@ -153,7 +163,8 @@ html, body {
 }
 
 #tasks-add {
-    border: solid 1px black;
+    border: solid 2px black;
+    border-radius: 9px;
     cursor: pointer;
 }
 
@@ -164,7 +175,8 @@ html, body {
 }
 
 .form-popup {
-    border: 3px solid #555B6E;
+    border: 6px solid black;
+    border-radius: 9px;
     bottom: 0;
     display: none;
     position: fixed;
@@ -174,7 +186,7 @@ html, body {
 
 .form-container {
     background-color: #FAF9F9;
-    border: solid 1px #555B6E;
+    border-radius: 9px;
     max-width: 500px;
     min-width: 400px;
     padding: 10px;
@@ -230,7 +242,7 @@ html, body {
 }
 
 #done-btn {
-    background-color: #555B6E;
+    background-color: black;
     border: none;
     color: white;
     cursor: pointer;
