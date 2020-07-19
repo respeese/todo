@@ -14,13 +14,13 @@ const TaskModule = (function () {
         let priority = "";
         let title = "";
 
-        if (document.getElementById('form-title').value != null) {
+        if (document.getElementById('form-title').value != '') {
             title = document.getElementById('form-title').value;
         }
-        if (document.getElementById('form-desc').value != null) {
+        if (document.getElementById('form-desc').value != '') {
             desc = document.getElementById('form-desc').value;
         }
-        if (document.getElementById('form-dueDate').value != null) {
+        if (document.getElementById('form-dueDate').value != '') {
             dueDate = document.getElementById('form-dueDate').value;
             let year = dueDate.slice(0, 4);
             let month = dueDate.slice(5,7);
@@ -35,7 +35,6 @@ const TaskModule = (function () {
         }
 
         let newTask = new Task(title, desc, dueDate, priority);
-
 
         if (document.getElementById('form-title').value == "") {
             alert('Please enter a title.');
